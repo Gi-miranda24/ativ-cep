@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de CEP</title>
+    <title>Buscar CEP</title>
     <link rel="stylesheet" href="assents/css/style.css">
     <link rel="shortcut icon" href="assents/img/logo2.ico" type="imagem/x-icon">
 
@@ -28,9 +28,10 @@
     <label for="cepInput">Digite o CEP:</label>
     <input type="text" id="cepInput">
     <button onclick="buscarEndereco()">Buscar</button>
-    <div id="endereco"></div>
-
     </section>
+
+    <div id="endereco"class="resposta"></div>
+    
 
     <script>
         function buscarEndereco() {
@@ -48,9 +49,11 @@
                 } else {
                     var endereco = `CEP: ${data.cep}, ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
                     document.getElementById('endereco').innerText = endereco;
+                    document.getElementById('endereco').style.display = 'block';
+
                 }
 
-                container.style.display = 'block'; // agora aparece
+              
             })
             .catch(error => console.error('Erro:', error));
         }

@@ -1,8 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media (max width: 600%){ 
 
+    background-color: yellow;
+    font-family:Poppins, sans-serif;
+    .banner img {
+        max-width: 80%;
+        height: auto;
+    }
+    
 
+}
 body{
 
     font-family: Poppins, sans-serif;
@@ -18,7 +27,7 @@ body{
 }
 
 .banner img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -32,6 +41,7 @@ body{
 }
 
 .busca input {
+    display: flex;
     padding: 10px;
     width: 250px;
     border: 1px solid #cccccc;
@@ -39,6 +49,7 @@ body{
 }
 
 .busca button {
+    display: flex;
     padding: 8px 16px;
     background-color: #ffcc00;
     border: none;
@@ -46,11 +57,30 @@ body{
     cursor: pointer;
     font-weight: bold;
     font-family: Poppins, sans-serif;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+
 }
 
 .busca button:hover {
+    display: flex;
     background-color: #2b2e8bee;
 }
 
 
-
+.resposta {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: yellow;
+    border-radius: 10px;
+    display: none; /* começa escondido */
+    white-space: pre-line;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
